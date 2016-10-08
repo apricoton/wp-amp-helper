@@ -52,7 +52,7 @@ if (!count($entry_image)) {
 		<script type="application/ld+json">
 			<?= json_encode([
 				'@context' => 'http://schema.org',
-				'@type' => 'NewsArticle',
+				'@type' => 'Article',
 				'mainEntityOfPage' => get_permalink(),
 				'headline' => get_the_title(),
 				'datePublished' => get_the_date('c'),

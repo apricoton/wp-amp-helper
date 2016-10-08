@@ -6,7 +6,7 @@ Description: Helper script for AMP single page.
 Version: 1.0
 Author: apricoton
 Author https://develop.apricoton.jp/
-License: MIT
+License: GPLv2 or later
 */
 
 class wpAmpHelper

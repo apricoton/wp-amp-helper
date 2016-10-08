@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WP AMP Helper
-Plugin URI: https://develop.apricoton.jp/
+Plugin URI: https://github.com/apricoton/wp-amp-helper
 Description: Helper script for AMP single page.
 Version: 1.0
 Author: apricoton
@@ -12,6 +12,15 @@ License: MIT
 class wpAmpHelper
 {
     const DS = DIRECTORY_SEPARATOR;
+    
+    public static function ampFilter($content)
+    {
+        if (is_single() && isset($_GET['amp'])) {
+            $content = preg_replace('!<img(.+?)>!i', '<div class="amp_img"><amp-img layout="responsive" \1></div>', $content);
+        }
+        
+        return $content;
+    }
     
     public static function ampPage()
     {
@@ -36,3 +45,4 @@ class wpAmpHelper
 
 add_action('template_redirect', ['WpAmpHelper', 'ampPage']);
 add_action('wp_head', ['WpAmpHelper', 'header']);
+add_filter('the_content', ['WpAmpHelper', 'ampFilter']);

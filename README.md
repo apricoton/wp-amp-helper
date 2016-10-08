@@ -1,7 +1,8 @@
 # WP AMP Helper
 ## Usage
-### Add your AMP Template
-```php:path/to/wp/wp-content/themes/YOUR_THEME_PATH/amp/single.php
+### 1. Add your AMP Template
+* PATH : path/to/wp/wp-content/themes/YOUR_THEME_PATH/amp/single.php
+```php
 <?php
 the_post();
 $entry_image = [];
@@ -212,3 +213,5 @@ if (!count($entry_image)) {
 	</body>
 </html>
 ```
+
+### 2. Enable plugin and Enjoy!

@@ -38,7 +38,7 @@ class wpAmpHelper
             $permalink  = get_permalink();
             $permalink .= (strpos($permalink, '?') !== false) ? '&' : '?';
             $permalink .= 'amp';
-            echo '<link rel="amphtml" href="' . htmlspecialchars($permalink) . '">';
+            echo '<link rel="amphtml" href="' . esc_url($permalink) . '">';
         }
     }
 }

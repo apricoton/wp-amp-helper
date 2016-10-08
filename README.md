@@ -2,6 +2,7 @@
 ## Usage
 ### 1. Add your AMP Template
 * PATH : path/to/wp/wp-content/themes/YOUR_THEME_PATH/amp/single.php
+
 #### Example template
 ```php
 <?php

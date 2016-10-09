@@ -1,4 +1,6 @@
 # WP AMP Helper
+AMP page helper for Wordpress
+
 ## Usage
 ### 1. Add your AMP Template
 * PATH : path/to/wp/wp-content/themes/YOUR_THEME_PATH/amp/single.php
@@ -96,7 +98,6 @@ if (!count($entry_image)) {
 			}
 			
 			body>header,
-			body>aside,
 			body>footer {
 				padding: 1rem;
 				text-align: center;
@@ -113,8 +114,13 @@ if (!count($entry_image)) {
 			}
 			
 			body>aside {
-				margin: 0 auto;
+				margin: 1rem auto;
 				width: 94%;
+				text-align: center;
+			}
+			
+			body>aside amp-social-share {
+				vertical-align: top;
 			}
 			
 			body>footer {

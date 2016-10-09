@@ -2,7 +2,7 @@
 /*
 Plugin Name: WP AMP Helper
 Plugin URI: https://github.com/apricoton/wp-amp-helper
-Description: Helper script for AMP single page.
+Description: Helper script for AMP.
 Version: 1.0
 Author: apricoton
 Author https://develop.apricoton.jp/

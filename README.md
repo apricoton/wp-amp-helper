@@ -1,5 +1,5 @@
 # WP AMP Helper
-AMP page helper for Wordpress
+AMP helper for Wordpress
 
 ## Usage
 ### 1. Add your AMP Template

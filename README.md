@@ -205,7 +205,7 @@ if (!count($entry_image)) {
 						<h1><?= get_the_title() ?></h1>
 						<div class="published"><?= get_the_date('Y/n/j H:i:s') ?></div>
 					</header>
-					<div id="content"><?= wpAmpHelper::ampFilter(get_the_content()) ?></div>
+					<div id="content"><?php the_content() ?></div>
 			</article>
 		</main>
 		<aside>

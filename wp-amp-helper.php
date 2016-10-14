@@ -3,7 +3,7 @@
 Plugin Name: WP AMP Helper
 Plugin URI: https://github.com/apricoton/wp-amp-helper
 Description: Helper script for AMP.
-Version: 1.0
+Version: 1.0.3
 Author: apricoton
 Author https://develop.apricoton.jp/
 License: GPLv2 or later
@@ -16,7 +16,10 @@ class wpAmpHelper
     public static function ampFilter($content)
     {
         if (is_single() && isset($_GET['amp'])) {
+            // imgタグをamp-imgに
             $content = preg_replace('!<img(.+?)>!i', '<div class="amp_img"><amp-img layout="responsive" \1></div>', $content);
+            // style属性削除
+            $content = preg_replace('!(\sstyle=[\"|\'].+?[\"|\'])!i', '', $content);
         }
         
         return $content;
